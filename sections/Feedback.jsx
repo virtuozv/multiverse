@@ -6,7 +6,7 @@ import styles from '../styles';
 import { fadeIn, staggerContainer, zoomIn, slideIn } from '../utils/motion';
 
 const Feedback = () => (
-  <section className={`${styles.paddings} mt-[50px]`}>
+  <section className={`${styles.paddings} mt-[80px]`}>
     <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true }} className={`${styles.innerWidth} gap-10 mx-auto flex lg:flex-row flex-col`}>
       <motion.div variants={fadeIn('right', 'tween', 0.2, 1)} className="flex-[0.5] lg:max-w-[370px] flex justify-end flex-col gradient-05 sm:p-8 p-4 rounded-[32px] border-[1px] border-[#6a6a6a] relative text-white">
         <div className="flex flex-col gap-3">
@@ -23,11 +23,11 @@ const Feedback = () => (
         </motion.div>
       </motion.div>
     </motion.div>
-    <motion.div variants={slideIn('left', 'spring', 0.47, 1.5)} initial="hidden" whileInView="show" viewport={{ once: true }} className={`${styles.innerWidth} mx-auto justify-between mt-[10vh] flex`}>
-      <h1 className="text-[64px] text-white font-semibold">Enter the Metaverse</h1>
-      <div className="bg-[#25618B] py-4 px-6 rounded-[24px] uppercase hover:bg-[#3878ee] cursor-pointer flex items-center">
-        <img src="/headset.svg" alt="headset" className="w-1/2 h-1/2 object-contain mr-[10px]" />
-        <div className="text-[16px] text-white flex items-center flex-nowrap w-[300px] h-[12px]">enter metaverse</div>
+    <motion.div variants={slideIn('left', 'spring', 0.47, 1.5)} initial="hidden" whileInView="show" viewport={{ once: true }} className={`${styles.innerWidth} mx-auto justify-between mt-[8vh] flex sm:flex-row flex-col items-center`}>
+      <h1 className="text-[64px] text-white font-semibold sm: text-center">Enter the Metaverse</h1>
+      <div className="bg-[#25618B] py-4 h-[64px] px-6 rounded-[34px] uppercase hover:bg-[#3878ee] cursor-pointer flex items-center">
+        <img src="/headset.svg" alt="headset" className="object-contain mr-[10px]" />
+        <div className="text-[16px] text-white flex items-center flex-nowrap w-[150px] h-[12px]">enter metaverse</div>
       </div>
     </motion.div>
   </section>
