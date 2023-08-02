@@ -6,7 +6,7 @@ import styles from '../styles';
 import { fadeIn } from '../utils/motion';
 
 const ExploreCard = ({id, imgUrl, title, index, active, handleClick}) => (
-  <motion.div variants={fadeIn('right', 'spring', index * 0.5, 0.75)} className={`relative flex min-w-[170px] ${active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'} duration-[0.7s] ease-out-flex justify-center items-center`} onClick={() => handleClick(id)}>
+  <motion.div variants={fadeIn('right', 'spring', index * 0.5, 0.75)} className={`cursor-pointer relative flex min-w-[170px] ${active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'} duration-[0.7s] ease-out-flex justify-center items-center`} onClick={() => handleClick(id)}>
     <img src={imgUrl} alt={title} className="absolute h-full w-full rounded-[24px]  object-cover" />
     {active !== id ? (
       <h3 className="font-semibold sm:text-[26px] text-[18px] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">{title}</h3>

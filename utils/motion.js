@@ -31,7 +31,7 @@ export const slideIn = (direction, type, delay, duration) => ({
       type,
       delay,
       duration,
-      stiffness: 90,
+      stiffness: 30,
       ease: 'easeOut',
     },
   },
